@@ -8,5 +8,5 @@ ENV HOME=/home/jupyter-user
 WORKDIR $HOME
 USER jupyter-user
 
-#CMD ["jupyterhub-singleuser"]
+CMD ["jupyterhub-singleuser"]
 
