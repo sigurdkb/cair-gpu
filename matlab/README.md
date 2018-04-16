@@ -1,7 +1,7 @@
 # Matlab R2018a
 
-Requires:
-* Install files available via http
-* FIK as environment variable
+Build with 
+* --build-arg SRC=http://<server>:<port>/MathWorks.7z
+* --build-arg FIK=<File Installation Key>
 
 
