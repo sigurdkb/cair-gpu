@@ -3,7 +3,8 @@ ARG JUPYTERHUB_VERSION=0.8.1
 RUN pip3 install --no-cache \
     jupyterhub==$JUPYTERHUB_VERSION
 
-RUN useradd -m jupyter-user
+RUN useradd -m jupyter-user \
+    && usermod -aG sudo jupyter-user
 ENV HOME=/home/jupyter-user
 WORKDIR $HOME
 USER jupyter-user
