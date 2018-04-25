@@ -6,7 +6,6 @@ RUN apt-get update && apt-get install -y \
     vim \
     emacs \
     openssh-client \
-    python-pip \
+    clang-3.8* \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install keras hdf5storage h5py numpy Cython sklearn
