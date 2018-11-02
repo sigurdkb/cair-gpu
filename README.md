@@ -3,7 +3,8 @@ Dockerfiles for use with cair's GPU servers.
 Coordinate changes on Slack: <https://cair-gpu.slack.com>
 
 ## Getting access
-Contact [Sigurd Brinch](mailto:sigurd.k.brinch@uia.no) to get access
+Contact [Sigurd Brinch](mailto:sigurd.k.brinch@uia.no) to get access.
+Once added, you'll use your UiA login.
 
 ## Available resources
 
