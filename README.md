@@ -16,7 +16,21 @@ Contact [Sigurd Brinch](mailto:sigurd.k.brinch@uia.no) to get access
   * *All users have access to all containers, do not mess with other people’s work*
 
 ## Using docker
-1. Check for available GPUs:
+### TLDR
+Create a folder for your data in your home folder
+```bash
+mkdir ~/data
+```
+Check for available GPUs
+```bash
+nvidia-smi
+```
+Run a docker container which use GPUs 0,1 and mounts your folder to /data inside the container
+```bash
+docker run -it --rm --runtime=nvidia --name sigurdkb -e NVIDIA_VISIBLE_DEVICES=0,1 --volume ~/data:/data nvcr.io/uiatekreal/cair
+```
+### Details
+* Check for available GPUs:
 ```bash
 nvidia-smi
 ```
@@ -86,7 +100,7 @@ Fri Nov  2 10:11:54 2018
 +-----------------------------------------------------------------------------+
 ```
 
-2. List available docker images:
+* List available docker images:
 ```bash
 docker images
 ```
@@ -102,7 +116,7 @@ nvcr.io/nvidia/cuda         9.2-devel           07a948073127        4 weeks ago 
 nvcr.io/nvidia/tensorflow   18.07-py3           8289b0a3b285        4 months ago        3.34GB
 ```
 
-3. Run a container:
+* Run a container:
 ```bash
 docker run -it --rm --runtime=nvidia --name sigurdkb nvcr.io/uiatekreal/cair
   -it    ->    Run interactively
